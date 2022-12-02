@@ -1,4 +1,7 @@
 import React from "react";
+import { GrCart } from "react-icons/gr";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { FaBalanceScale } from "react-icons/fa";
 import "./Product.scss";
 
 const Product = () => {
@@ -58,6 +61,28 @@ const Product = () => {
           </button>
           {quantity}
           <button onClick={() => setQuantity(quantity + 1)}>+</button>
+        </div>
+        <button className="add-btn">
+          Add to Cart <GrCart className="add-icon" />
+        </button>
+        <div className="links">
+          <div className="item">
+            <MdOutlineFavoriteBorder /> ADD TO WISH LIST
+          </div>
+          <div className="item">
+            <FaBalanceScale /> ADD TO COMPARE
+          </div>
+        </div>
+        <div className="info">
+          <span>Vendor: La Kress</span>
+          <span>Product Type: Dress</span>
+          <span>Tag: Dress, Women, Top, Accessories</span>
+        </div>
+        <hr />
+        <div className="info">
+          <span>DESCRIPTION</span>
+          <span>ADDITIONAL INFORMATION</span>
+          <span>FAQ</span>
         </div>
       </div>
     </div>

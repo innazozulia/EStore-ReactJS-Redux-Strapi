@@ -7,9 +7,11 @@ import {
 } from "react-icons/bs";
 import { MdOutlineFavorite } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const [openCart, setOpenCart] = React.useState(false);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -95,13 +97,16 @@ const Navbar = () => {
             <BsSearch />
             <BsFillPersonFill />
             <MdOutlineFavorite />
-            <div className="cartIcon">
+            <div
+              className="cart-icon"
+              onClick={() => setOpenCart(!openCart)}>
               <BsCart3 />
               <span>0</span>
             </div>
           </div>
         </div>
       </div>
+      {openCart && <Cart />}
     </div>
   );
 };
