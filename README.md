@@ -1,1 +1,1 @@
-# EStoreReactJS-Redux
+#EStore-ReactJS-Redux-Strapi
