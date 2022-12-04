@@ -40,6 +40,18 @@ const Featured = ({ type }) => {
       price: 16,
     },
   ];
+
+  const [products, setProducts] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await axios.get();
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  }, []);
   return (
     <div className="featured">
       <div className="top">
